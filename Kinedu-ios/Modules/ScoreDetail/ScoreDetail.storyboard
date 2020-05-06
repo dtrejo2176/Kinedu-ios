@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="GothamRounded-Medium.otf">
+            <string>GothamRounded-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Score Detail View Controller-->
+        <scene sceneID="T5q-cO-LT5">
+            <objects>
+                <viewController storyboardIdentifier="ScoreDetailViewController" id="f3z-l8-waU" customClass="ScoreDetailViewController" customModule="Kinedu_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bPE-MB-sQk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MdZ-No-HpM">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="226"/>
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kp2-fK-rzS" customClass="KineduCollectionView" customModule="Kinedu_ios" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="60" width="375" height="128"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="128" id="Yqw-hG-877"/>
+                                        </constraints>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sw7-mF-0GG">
+                                            <size key="itemSize" width="128" height="128"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GradeCollectionViewCell" id="Cun-Ny-G9c" customClass="ScoreDetailCollectionViewCell" customModule="Kinedu_ios" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="120" height="128"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="G9e-QW-jIs">
+                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="128"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zv8-AP-9Mt" customClass="RoundedView" customModule="Kinedu_ios" customModuleProvider="target">
+                                                            <rect key="frame" x="8" y="0.0" width="104" height="104"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yZg-8Y-Yi3">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="104" height="104"/>
+                                                                </imageView>
+                                                            </subviews>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                            <constraints>
+                                                                <constraint firstItem="yZg-8Y-Yi3" firstAttribute="top" secondItem="Zv8-AP-9Mt" secondAttribute="top" id="3lY-ab-Gm9"/>
+                                                                <constraint firstAttribute="bottom" secondItem="yZg-8Y-Yi3" secondAttribute="bottom" id="6R5-fG-QkW"/>
+                                                                <constraint firstAttribute="width" constant="104" id="7GQ-zA-lex"/>
+                                                                <constraint firstAttribute="trailing" secondItem="yZg-8Y-Yi3" secondAttribute="trailing" id="7ek-HQ-PXy"/>
+                                                                <constraint firstAttribute="height" constant="104" id="SaE-jX-fV1"/>
+                                                                <constraint firstItem="yZg-8Y-Yi3" firstAttribute="leading" secondItem="Zv8-AP-9Mt" secondAttribute="leading" id="lNh-oe-3c1"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="52"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                    <real key="value" value="0.0"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VpS-Ne-OKJ">
+                                                            <rect key="frame" x="55.5" y="106" width="9.5" height="20"/>
+                                                            <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="Zv8-AP-9Mt" firstAttribute="top" secondItem="G9e-QW-jIs" secondAttribute="top" id="5aV-lE-4wz"/>
+                                                        <constraint firstItem="VpS-Ne-OKJ" firstAttribute="centerX" secondItem="G9e-QW-jIs" secondAttribute="centerX" id="T6a-os-xLn"/>
+                                                        <constraint firstAttribute="bottom" secondItem="VpS-Ne-OKJ" secondAttribute="bottom" constant="2" id="daP-52-ew9"/>
+                                                        <constraint firstItem="Zv8-AP-9Mt" firstAttribute="centerX" secondItem="G9e-QW-jIs" secondAttribute="centerX" id="vPU-z5-0VE"/>
+                                                    </constraints>
+                                                </collectionViewCellContentView>
+                                                <size key="customSize" width="120" height="128"/>
+                                                <connections>
+                                                    <outlet property="gradeImageView" destination="yZg-8Y-Yi3" id="dDE-OF-ckB"/>
+                                                    <outlet property="gradeLabel" destination="VpS-Ne-OKJ" id="tB0-e8-wMS"/>
+                                                    <outlet property="roundedView" destination="Zv8-AP-9Mt" id="OTv-um-x0O"/>
+                                                </connections>
+                                            </collectionViewCell>
+                                        </cells>
+                                        <connections>
+                                            <outlet property="delegate" destination="f3z-l8-waU" id="dl1-af-jYH"/>
+                                        </connections>
+                                    </collectionView>
+                                </subviews>
+                                <color key="backgroundColor" name="KineduDarkBlue"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="kp2-fK-rzS" secondAttribute="trailing" id="8CP-je-tUb"/>
+                                    <constraint firstItem="kp2-fK-rzS" firstAttribute="top" secondItem="MdZ-No-HpM" secondAttribute="top" constant="60" id="Qbs-aa-SQ2"/>
+                                    <constraint firstItem="kp2-fK-rzS" firstAttribute="leading" secondItem="MdZ-No-HpM" secondAttribute="leading" id="TM3-vP-S8P"/>
+                                    <constraint firstAttribute="height" constant="226" id="fr8-Oe-hEh"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pJk-1k-FPq">
+                                <rect key="frame" x="107.5" y="22" width="160" height="23.5"/>
+                                <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rgG-Ud-z5b" customClass="RoundedView" customModule="Kinedu_ios" customModuleProvider="target">
+                                <rect key="frame" x="16" y="254" width="343" height="363"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="06" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isi-6e-7Bf">
+                                        <rect key="frame" x="60" y="90" width="27" height="28"/>
+                                        <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="24"/>
+                                        <color key="textColor" name="KineduLightBlue"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="06" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4no-OC-oXn">
+                                        <rect key="frame" x="256" y="90" width="27" height="28"/>
+                                        <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="24"/>
+                                        <color key="textColor" name="KineduLightBlue"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8rP-sT-Tqd">
+                                        <rect key="frame" x="0.0" y="268" width="343" height="95"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N9a-sD-Pe5">
+                                                <rect key="frame" x="35" y="16" width="284" height="59"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="50% of the users that answered 2 in their NPS score saw 8 activities">
+                                                        <attributes>
+                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" name="KineduDarkBlue"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="95" id="F8u-Hi-uUA"/>
+                                            <constraint firstItem="N9a-sD-Pe5" firstAttribute="top" secondItem="8rP-sT-Tqd" secondAttribute="top" constant="16" id="Kqp-NK-QvD"/>
+                                            <constraint firstItem="N9a-sD-Pe5" firstAttribute="leading" secondItem="8rP-sT-Tqd" secondAttribute="leading" constant="35" id="c7P-xo-nXz"/>
+                                            <constraint firstAttribute="trailing" secondItem="N9a-sD-Pe5" secondAttribute="trailing" constant="24" id="rek-ih-01p"/>
+                                            <constraint firstAttribute="bottom" secondItem="N9a-sD-Pe5" secondAttribute="bottom" constant="20" id="x8S-SM-i3M"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NPS DETAILS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XHr-j7-7pz">
+                                        <rect key="frame" x="103.5" y="32" width="136.5" height="26"/>
+                                        <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="22"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fremium users" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="113" translatesAutoresizingMaskIntoConstraints="NO" id="Hgw-af-ry7">
+                                        <rect key="frame" x="38" y="126" width="78" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="EFC-XI-jb8"/>
+                                            <constraint firstAttribute="width" constant="78" id="n3U-Nb-8pj"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="16"/>
+                                        <color key="textColor" name="KineduBlue"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Premium users" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="113" translatesAutoresizingMaskIntoConstraints="NO" id="GbE-Sb-RtL">
+                                        <rect key="frame" x="227" y="126" width="78" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="gdA-fz-NiW"/>
+                                            <constraint firstAttribute="width" constant="78" id="oNX-fy-DAq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="16"/>
+                                        <color key="textColor" name="KineduBlue"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="4no-OC-oXn" secondAttribute="trailing" constant="60" id="0Ox-nW-dzp"/>
+                                    <constraint firstAttribute="trailing" secondItem="GbE-Sb-RtL" secondAttribute="trailing" constant="38" id="Dob-hU-hFx"/>
+                                    <constraint firstAttribute="bottom" secondItem="8rP-sT-Tqd" secondAttribute="bottom" id="Dwy-6m-RJe"/>
+                                    <constraint firstItem="XHr-j7-7pz" firstAttribute="top" secondItem="rgG-Ud-z5b" secondAttribute="top" constant="32" id="GVx-W6-QPu"/>
+                                    <constraint firstItem="Hgw-af-ry7" firstAttribute="leading" secondItem="rgG-Ud-z5b" secondAttribute="leading" constant="38" id="PRk-68-kxb"/>
+                                    <constraint firstItem="isi-6e-7Bf" firstAttribute="top" secondItem="rgG-Ud-z5b" secondAttribute="top" constant="90" id="SRm-b4-TV9"/>
+                                    <constraint firstItem="Hgw-af-ry7" firstAttribute="top" secondItem="isi-6e-7Bf" secondAttribute="bottom" constant="8" id="as9-nt-BwU"/>
+                                    <constraint firstItem="4no-OC-oXn" firstAttribute="top" secondItem="rgG-Ud-z5b" secondAttribute="top" constant="90" id="efQ-B4-LcP"/>
+                                    <constraint firstItem="isi-6e-7Bf" firstAttribute="leading" secondItem="rgG-Ud-z5b" secondAttribute="leading" constant="60" id="eg0-Kf-cpu"/>
+                                    <constraint firstItem="8rP-sT-Tqd" firstAttribute="leading" secondItem="rgG-Ud-z5b" secondAttribute="leading" id="mPy-Sd-puH"/>
+                                    <constraint firstItem="GbE-Sb-RtL" firstAttribute="top" secondItem="4no-OC-oXn" secondAttribute="bottom" constant="8" id="mV7-bK-w0x"/>
+                                    <constraint firstAttribute="trailing" secondItem="8rP-sT-Tqd" secondAttribute="trailing" id="nYV-dM-5nd"/>
+                                    <constraint firstItem="XHr-j7-7pz" firstAttribute="centerX" secondItem="rgG-Ud-z5b" secondAttribute="centerX" id="pa1-7y-v98"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="Gray1"/>
+                        <constraints>
+                            <constraint firstItem="pJk-1k-FPq" firstAttribute="centerX" secondItem="bPE-MB-sQk" secondAttribute="centerX" id="Coc-3p-x4E"/>
+                            <constraint firstItem="rgG-Ud-z5b" firstAttribute="top" secondItem="MdZ-No-HpM" secondAttribute="bottom" constant="28" id="Crl-if-mf1"/>
+                            <constraint firstItem="MdZ-No-HpM" firstAttribute="leading" secondItem="l1U-pc-YoF" secondAttribute="leading" id="Eg2-dV-ivu"/>
+                            <constraint firstItem="rgG-Ud-z5b" firstAttribute="leading" secondItem="l1U-pc-YoF" secondAttribute="leading" constant="16" id="G8t-t4-Wqi"/>
+                            <constraint firstItem="l1U-pc-YoF" firstAttribute="bottom" secondItem="rgG-Ud-z5b" secondAttribute="bottom" constant="50" id="Khr-Po-JPx"/>
+                            <constraint firstItem="MdZ-No-HpM" firstAttribute="top" secondItem="l1U-pc-YoF" secondAttribute="top" id="O15-Z5-zUP"/>
+                            <constraint firstItem="pJk-1k-FPq" firstAttribute="top" secondItem="l1U-pc-YoF" secondAttribute="top" constant="22" id="gjo-zt-PO5"/>
+                            <constraint firstItem="MdZ-No-HpM" firstAttribute="trailing" secondItem="l1U-pc-YoF" secondAttribute="trailing" id="jzw-c5-CiS"/>
+                            <constraint firstItem="l1U-pc-YoF" firstAttribute="trailing" secondItem="rgG-Ud-z5b" secondAttribute="trailing" constant="16" id="tTz-XD-PyX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="l1U-pc-YoF"/>
+                    </view>
+                    <connections>
+                        <outlet property="activiesLabel" destination="N9a-sD-Pe5" id="FEm-F0-xjW"/>
+                        <outlet property="fremiumUsersLabel" destination="isi-6e-7Bf" id="VbO-v6-TnS"/>
+                        <outlet property="gradesCollectionView" destination="kp2-fK-rzS" id="cG4-Zf-IoE"/>
+                        <outlet property="premiumUsersLabel" destination="4no-OC-oXn" id="VyS-LJ-iig"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BBn-3J-k9c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="69.599999999999994" y="115.59220389805098"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="Gray1">
+            <color red="0.9570000171661377" green="0.9570000171661377" blue="0.9570000171661377" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="KineduBlue">
+            <color red="0.10599999874830246" green="0.45899999141693115" blue="0.73299998044967651" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="KineduDarkBlue">
+            <color red="0.071000002324581146" green="0.3919999897480011" blue="0.64300000667572021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="KineduLightBlue">
+            <color red="0.12200000137090683" green="0.67799997329711914" blue="0.875" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

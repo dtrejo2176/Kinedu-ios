@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="GothamRounded-Bold.otf">
+            <string>GothamRounded-Bold</string>
+        </array>
+        <array key="GothamRounded-Light.otf">
+            <string>GothamRounded-Light</string>
+        </array>
+        <array key="GothamRounded-Medium.otf">
+            <string>GothamRounded-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Nps Score View Controller-->
+        <scene sceneID="H8o-Jn-HvX">
+            <objects>
+                <viewController storyboardIdentifier="NpsScoreViewController" id="513-Qn-bm3" customClass="NpsScoreViewController" customModule="Kinedu_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="50D-1q-VZb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose app version" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zgt-Jd-v57">
+                                <rect key="frame" x="107" y="20" width="161.5" height="21"/>
+                                <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="18"/>
+                                <color key="textColor" name="Gray4"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="lUu-us-fAG" customClass="KineduSegmentedControl" customModule="Kinedu_ios" customModuleProvider="target">
+                                <rect key="frame" x="16" y="59" width="343" height="32"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="C3Z-vJ-vJF"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="3.2.2"/>
+                                    <segment title="3.2.1"/>
+                                    <segment title="3.1.12"/>
+                                </segments>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="selectedSegmentTintColor" name="KineduYellow"/>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="540-Ya-Eo4" customClass="RoundedView" customModule="Kinedu_ios" customModuleProvider="target">
+                                <rect key="frame" x="16" y="120" width="343" height="437"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TUF-b1-uyO" userLabel="SpacingView">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="240.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dx1-dc-eH9" userLabel="SeparatorView">
+                                        <rect key="frame" x="0.0" y="240.5" width="343" height="1"/>
+                                        <color key="backgroundColor" name="Gray1"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="tSR-b9-Bgj"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NPS SCORE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WF2-zH-lpT">
+                                        <rect key="frame" x="108.5" y="30" width="126" height="26"/>
+                                        <fontDescription key="fontDescription" name="GothamRounded-Light" family="Gotham Rounded" pointSize="22"/>
+                                        <color key="textColor" name="Gray5"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fremium users" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pzu-Nd-Tra">
+                                        <rect key="frame" x="125" y="69" width="93" height="16.5"/>
+                                        <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="14"/>
+                                        <color key="textColor" name="KineduBlue"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Out of X users" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMg-bG-1HT">
+                                        <rect key="frame" x="133.5" y="203.5" width="76.5" height="14"/>
+                                        <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="12"/>
+                                        <color key="textColor" name="Gray4"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Premium users" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aeF-8b-C9s">
+                                        <rect key="frame" x="124.5" y="266.5" width="94" height="16.5"/>
+                                        <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="14"/>
+                                        <color key="textColor" name="KineduBlue"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GjT-gT-rvD">
+                                        <rect key="frame" x="130.5" y="308.5" width="82.5" height="86.5"/>
+                                        <fontDescription key="fontDescription" name="GothamRounded-Bold" family="Gotham Rounded" pointSize="74"/>
+                                        <color key="textColor" name="KineduGreen"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Out of X users" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ne6-Kz-8pP">
+                                        <rect key="frame" x="133.5" y="400" width="76.5" height="14"/>
+                                        <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="12"/>
+                                        <color key="textColor" name="Gray4"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bGX-CJ-jIT">
+                                        <rect key="frame" x="130.5" y="112" width="82.5" height="86.5"/>
+                                        <fontDescription key="fontDescription" name="GothamRounded-Bold" family="Gotham Rounded" pointSize="74"/>
+                                        <color key="textColor" name="KineduGreen"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="Dx1-dc-eH9" firstAttribute="top" secondItem="TUF-b1-uyO" secondAttribute="bottom" id="2VI-tc-r40"/>
+                                    <constraint firstItem="TUF-b1-uyO" firstAttribute="top" secondItem="540-Ya-Eo4" secondAttribute="top" id="6AR-9I-He3"/>
+                                    <constraint firstAttribute="trailing" secondItem="TUF-b1-uyO" secondAttribute="trailing" id="7F6-Fw-yQv"/>
+                                    <constraint firstAttribute="trailing" secondItem="Dx1-dc-eH9" secondAttribute="trailing" id="7QV-Jx-0EP"/>
+                                    <constraint firstItem="aeF-8b-C9s" firstAttribute="centerX" secondItem="540-Ya-Eo4" secondAttribute="centerX" id="848-2Q-gCH"/>
+                                    <constraint firstItem="bGX-CJ-jIT" firstAttribute="centerX" secondItem="540-Ya-Eo4" secondAttribute="centerX" id="GuA-Lr-0yW"/>
+                                    <constraint firstItem="pMg-bG-1HT" firstAttribute="top" secondItem="bGX-CJ-jIT" secondAttribute="bottom" constant="5" id="H4M-CG-x8m"/>
+                                    <constraint firstItem="TUF-b1-uyO" firstAttribute="leading" secondItem="540-Ya-Eo4" secondAttribute="leading" id="MU6-DE-Z5c"/>
+                                    <constraint firstItem="Dx1-dc-eH9" firstAttribute="top" secondItem="pMg-bG-1HT" secondAttribute="bottom" constant="23" id="Nsf-ev-RS3"/>
+                                    <constraint firstItem="GjT-gT-rvD" firstAttribute="centerX" secondItem="540-Ya-Eo4" secondAttribute="centerX" id="Wzc-5p-LHF"/>
+                                    <constraint firstAttribute="bottom" secondItem="ne6-Kz-8pP" secondAttribute="bottom" constant="23" id="XPi-JH-HQJ"/>
+                                    <constraint firstItem="pzu-Nd-Tra" firstAttribute="centerX" secondItem="540-Ya-Eo4" secondAttribute="centerX" id="XvW-s7-Ymn"/>
+                                    <constraint firstItem="Dx1-dc-eH9" firstAttribute="leading" secondItem="540-Ya-Eo4" secondAttribute="leading" id="b9a-xH-rm3"/>
+                                    <constraint firstItem="ne6-Kz-8pP" firstAttribute="top" secondItem="GjT-gT-rvD" secondAttribute="bottom" constant="5" id="fCw-8z-bSE"/>
+                                    <constraint firstItem="TUF-b1-uyO" firstAttribute="height" secondItem="540-Ya-Eo4" secondAttribute="height" multiplier="0.55" id="ffo-6X-mN1"/>
+                                    <constraint firstItem="WF2-zH-lpT" firstAttribute="top" secondItem="540-Ya-Eo4" secondAttribute="top" constant="30" id="lTr-Yb-HPk"/>
+                                    <constraint firstItem="pMg-bG-1HT" firstAttribute="centerX" secondItem="540-Ya-Eo4" secondAttribute="centerX" id="nlq-4u-PxE"/>
+                                    <constraint firstItem="WF2-zH-lpT" firstAttribute="centerX" secondItem="540-Ya-Eo4" secondAttribute="centerX" id="oOh-dY-jNc"/>
+                                    <constraint firstItem="aeF-8b-C9s" firstAttribute="top" secondItem="Dx1-dc-eH9" secondAttribute="bottom" constant="25" id="qyh-sR-Mpv"/>
+                                    <constraint firstItem="ne6-Kz-8pP" firstAttribute="centerX" secondItem="540-Ya-Eo4" secondAttribute="centerX" id="ve3-nm-XIs"/>
+                                    <constraint firstItem="pzu-Nd-Tra" firstAttribute="top" secondItem="WF2-zH-lpT" secondAttribute="bottom" constant="13" id="w54-5v-wfR"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GIg-4Y-Jya" customClass="KineduButton" customModule="Kinedu_ios" customModuleProvider="target">
+                                <rect key="frame" x="41" y="587" width="293" height="50"/>
+                                <color key="backgroundColor" name="KineduGreen"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="0rS-mv-HjB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="16"/>
+                                <state key="normal" title="See more details"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="Gray1"/>
+                        <constraints>
+                            <constraint firstItem="lUu-us-fAG" firstAttribute="top" secondItem="zgt-Jd-v57" secondAttribute="bottom" constant="18" id="4BD-O5-gsX"/>
+                            <constraint firstItem="GIg-4Y-Jya" firstAttribute="leading" secondItem="2Lp-ej-6pP" secondAttribute="leading" constant="41" id="8yD-2G-f12"/>
+                            <constraint firstItem="540-Ya-Eo4" firstAttribute="top" secondItem="lUu-us-fAG" secondAttribute="bottom" constant="30" id="E81-u2-O1j"/>
+                            <constraint firstItem="540-Ya-Eo4" firstAttribute="leading" secondItem="2Lp-ej-6pP" secondAttribute="leading" constant="16" id="Jqz-vn-G7P"/>
+                            <constraint firstItem="zgt-Jd-v57" firstAttribute="centerX" secondItem="50D-1q-VZb" secondAttribute="centerX" id="S3a-9r-3vV"/>
+                            <constraint firstItem="lUu-us-fAG" firstAttribute="leading" secondItem="2Lp-ej-6pP" secondAttribute="leading" constant="16" id="YFc-gM-rKC"/>
+                            <constraint firstItem="zgt-Jd-v57" firstAttribute="top" secondItem="2Lp-ej-6pP" secondAttribute="top" constant="20" id="apU-L8-Q7R"/>
+                            <constraint firstItem="GIg-4Y-Jya" firstAttribute="top" secondItem="540-Ya-Eo4" secondAttribute="bottom" constant="30" id="cV7-uy-eG1"/>
+                            <constraint firstItem="2Lp-ej-6pP" firstAttribute="trailing" secondItem="lUu-us-fAG" secondAttribute="trailing" constant="16" id="czH-Pl-4fs"/>
+                            <constraint firstItem="2Lp-ej-6pP" firstAttribute="trailing" secondItem="540-Ya-Eo4" secondAttribute="trailing" constant="16" id="g6i-AF-rRh"/>
+                            <constraint firstItem="2Lp-ej-6pP" firstAttribute="bottom" secondItem="GIg-4Y-Jya" secondAttribute="bottom" constant="30" id="xlT-tk-1Xe"/>
+                            <constraint firstItem="2Lp-ej-6pP" firstAttribute="trailing" secondItem="GIg-4Y-Jya" secondAttribute="trailing" constant="41" id="z5n-i2-gJ4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2Lp-ej-6pP"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ml2-A9-koy"/>
+                    <connections>
+                        <outlet property="fremiumScoreLabel" destination="bGX-CJ-jIT" id="2o1-1C-X0b"/>
+                        <outlet property="fremiumUserCountLabel" destination="pMg-bG-1HT" id="GBG-eg-QLw"/>
+                        <outlet property="moreDetailsButton" destination="GIg-4Y-Jya" id="geU-lg-ljD"/>
+                        <outlet property="premiumScoreLabel" destination="GjT-gT-rvD" id="dv1-Fb-DAt"/>
+                        <outlet property="premiumUserCountLabel" destination="ne6-Kz-8pP" id="2Np-dW-nLI"/>
+                        <outlet property="versionSegmentedControl" destination="lUu-us-fAG" id="Dg6-NF-UFn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s1I-EP-1q4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1980" y="86.806596701649184"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="Gray1">
+            <color red="0.9570000171661377" green="0.9570000171661377" blue="0.9570000171661377" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Gray4">
+            <color red="0.60000002384185791" green="0.60000002384185791" blue="0.60000002384185791" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Gray5">
+            <color red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="KineduBlue">
+            <color red="0.10599999874830246" green="0.45899999141693115" blue="0.73299998044967651" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="KineduGreen">
+            <color red="0.47099998593330383" green="0.71799999475479126" blue="0.25900000333786011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="KineduYellow">
+            <color red="0.96899998188018799" green="0.55699998140335083" blue="0.1289999932050705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
